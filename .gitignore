@@ -1,0 +1,31 @@
+# Generated Vivado project (created by scripts/create_project.tcl)
+build/
+
+# Files Vivado drops in whatever folder it is launched from
+.Xil/
+*.jou
+*.log
+*.str
+
+# Safety net in case a project ever gets created outside build/
+*.cache/
+*.runs/
+*.sim/
+*.gen/
+*.hw/
+*.ip_user_files/
+*.xpr
+
+# Simulation outputs
+xsim.dir/
+*.wdb
+*.vcd
+*.ghw
+*.cf
+
+# Python
+__pycache__/
+*.pyc
+
+# Editors
+*.swp
