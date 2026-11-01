@@ -1,3 +1,8 @@
+
+# ==========================================
+# Vivado
+# ==========================================
+
 # Generated Vivado project (created by scripts/create_project.tcl)
 build/
 
@@ -7,7 +12,7 @@ build/
 *.log
 *.str
 
-# Safety net in case a project ever gets created outside build/
+# Safety net in case a project gets created outside build/
 *.cache/
 *.runs/
 *.sim/
@@ -16,16 +21,60 @@ build/
 *.ip_user_files/
 *.xpr
 
-# Simulation outputs
+# ==========================================
+# Simulation (GHDL, cocotb, Vivado)
+# ==========================================
+
+# Simulation directories
 xsim.dir/
+sim_build/
+
+# Waveform files
 *.wdb
 *.vcd
 *.ghw
-*.cf
+*.fst
 
+# GHDL compilation and elaboration artifacts
+*.o
+*.cf
+e~*.lst
+
+# GHDL executables (specific generated binary)
+tb/nco/nco
+
+# cocotb test results
+results.xml
+compile.log
+
+# ==========================================
 # Python
+# ==========================================
+
 __pycache__/
 *.pyc
+*.pyo
 
+# Python virtual environments
+.venv/
+venv/
+
+# Python testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ==========================================
 # Editors
+# ==========================================
+
 *.swp
+*.swo
+.vscode/*.log
+
+# ==========================================
+# Operating system
+# ==========================================
+
+.DS_Store
+Thumbs.db

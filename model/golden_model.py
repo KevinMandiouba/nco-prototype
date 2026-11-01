@@ -29,6 +29,7 @@ LOW_BITS = PHASE_BITS - INDEX_BITS
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 GEN_DIR = PROJECT_ROOT / "gen"
 PLOT_DIR = GEN_DIR / "plots"
+RTL_DIR = PROJECT_ROOT / "rtl" / "nco"
 
 
 # ============================================================
@@ -475,7 +476,7 @@ def main():
     # Step 6: Generate VHDL package
     write_vhdl_package(
         sine_table,
-        GEN_DIR / "sine_rom_pkg.vhd"
+        RTL_DIR / "sine_rom_pkg.vhd"
     )
 
     # Step 7: Generate expected DAC file
@@ -513,7 +514,7 @@ def main():
     print("====================================")
 
     print("\nGenerated files:")
-    print(GEN_DIR / "sine_rom_pkg.vhd")
+    print(RTL_DIR / "sine_rom_pkg.vhd")
     print(GEN_DIR / "expected_dac_words.txt")
     print(PLOT_DIR / "time_domain.png")
     print(PLOT_DIR / "spectrum.png")
